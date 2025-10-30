@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGamepad, FaTrophy, FaUsers, FaBolt, FaShieldAlt, FaDollarSign, FaStar } from 'react-icons/fa';
+import { FaGamepad, FaTrophy, FaUsers, FaBolt, FaStar } from 'react-icons/fa';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import './styles/Home.css';
@@ -107,39 +107,6 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
-          </motion.div>
-        </div>
-
-        <div className="hero-stats container">
-          <motion.div
-            className="stat-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            <FaUsers className="stat-icon" />
-            <div className="stat-number">10K+</div>
-            <div className="stat-label">Active Gamers</div>
-          </motion.div>
-          <motion.div
-            className="stat-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <FaTrophy className="stat-icon" />
-            <div className="stat-number">50K+</div>
-            <div className="stat-label">Jobs Completed</div>
-          </motion.div>
-          <motion.div
-            className="stat-item"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7 }}
-          >
-            <FaDollarSign className="stat-icon" />
-            <div className="stat-number">$2M+</div>
-            <div className="stat-label">Paid Out</div>
           </motion.div>
         </div>
       </section>
