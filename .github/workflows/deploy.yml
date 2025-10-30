@@ -19,6 +19,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,10 +35,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist  # or ./dist depending on your framework
+          name: github-pages
+          path: ./dist  # change to ./build if you're using React without Vite
 
       - name: Deploy to GitHub Pages
         id: deployment
