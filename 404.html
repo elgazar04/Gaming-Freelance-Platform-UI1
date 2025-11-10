@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Page not found — Redirecting…</title>
+    <script>
+      // SPA-friendly 404: fetch the site's root index and render it in-place.
+      // This preserves the requested URL in the address bar while serving the
+      // app content (works well on GitHub Pages for client-side routing).
+      (function(){
+        var base = '/Gaming-Freelance-Platform-UI1/';
+        try {
+          fetch(base)
+            .then(function(resp){ return resp.text(); })
+            .then(function(html){
+              document.open();
+              document.write(html);
+              document.close();
+            })
+            .catch(function(){ window.location.href = base; });
+        } catch(e){ window.location.href = base; }
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
